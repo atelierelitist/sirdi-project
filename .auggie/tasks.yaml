@@ -143,3 +143,16 @@ SH
 - name: backup_keys
 description: Encrypt SIRDI key, checksum, copy to USB/Cloud, and verify
 command: bash ~/sirdi-project/bin/backup_keys.sh
+
+- name: announce_founders_circle_x
+description: Draft an 8-post X thread announcing the Sovereign Founders Circle (5 seats)
+command: |
+mkdir -p out
+ollama run sirdi "Write an 8-post X thread announcing a 5-seat 'Sovereign Founders Circle' (£25k initiation + £15k advisory). Hook hard. Bullet deliverables. Emphasize verifiable proof (signed logs). Link to ./docs/founders-circle.html. CTA: DM/email to apply. Output plain text separated by lines of ---." > out/thread_x.txt
+echo "🧵 out/thread_x.txt"
+- name: announce_founders_circle_linkedin
+description: Draft a LinkedIn post announcing the Sovereign Founders Circle
+command: |
+mkdir -p out
+ollama run sirdi "You are the Sovereign Architect. Draft a concise LinkedIn post for executives announcing a 5-seat Sovereign Founders Circle (£25k + £15k). Structure: problem → protocol → proof → scarcity → CTA. Include 3 bullets and the page link ./docs/founders-circle.html" > out/post_linkedin.txt
+echo "🔗 out/post_linkedin.txt"

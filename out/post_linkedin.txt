@@ -1,0 +1,22 @@
+🔐 SOVEREIGN FOUNDERS CIRCLE — 5 Executive Seats Available
+
+**The Problem:** Your infrastructure audit trail is fiction. When regulators, investors, or compliance teams ask "prove your deployment integrity," you have logs that could be fabricated in minutes.
+
+**The Protocol:** Sovereign Stack transforms chaos into cryptographically verifiable order. Every operation signed (signify-openbsd). Every deployment provable. Every audit trail immutable.
+
+**The Proof:** 
+• Cryptographically signed operations & logs
+• Hardware sovereignty (no cloud vendor lock-in)  
+• Self-teaching automation with verifiable runbooks
+
+**The Scarcity:** 5 seats. £25k initiation + £15k advisory. Upside participation (0.25% warrant OR 1% revenue share, 24mo).
+
+This isn't consulting—it's infrastructure transformation that scales from startup to IPO.
+
+**Ready to go sovereign?** 
+📧 sheridon@yourdomain  
+📋 ./docs/founders-circle.html
+
+Applications reviewed weekly. Quality over quantity. Always.
+
+#Infrastructure #Sovereignty #Cryptography #Startups #Compliance

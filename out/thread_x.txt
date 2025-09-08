@@ -1,0 +1,79 @@
+🚨 SOVEREIGN FOUNDERS CIRCLE — 5 SEATS ONLY 🚨
+
+Your startup's infrastructure is chaos. Unverifiable deployments. No audit trail. Zero cryptographic proof.
+
+Meanwhile, your competitors are building on quicksand.
+
+Time to go sovereign. 🧵
+
+---
+
+The problem: Every "DevOps" consultant gives you the same playbook.
+
+Docker + K8s + "monitoring" + prayers.
+
+But when regulators ask "prove your deployment integrity" or investors demand "show me the audit trail"...
+
+You have nothing. Just logs that could be faked.
+
+---
+
+Introducing: Sovereign Stack Protocol
+
+• Cryptographically signed operations (signify-openbsd)
+• Immutable audit trails with genesis verification
+• Self-teaching automation (Auggie + brain/)
+• Hardware sovereignty (no cloud dependencies)
+
+Every action is PROVABLE. Every log is SIGNED.
+
+---
+
+What you get in the Founders Circle:
+
+• Sovereign Stack Audit — integrity, automation, evidence
+• 14-day Implementation Sprint — Auggie rituals, signed logs, runbooks
+• Sovereign Seed (Pi kit) — preconfigured, delivered
+• Proof Pack — cryptographically signed reports & HOW-TOs
+
+---
+
+This isn't consulting. This is transformation.
+
+From chaos → verifiable order
+From trust → cryptographic proof
+From vendor lock-in → true sovereignty
+
+Your infrastructure becomes a competitive moat, not a liability.
+
+---
+
+The terms:
+• £25,000 initiation (Audit + Sprint)
+• £15,000 mandatory 90-day Advisory
+• Upside: 0.25% warrant OR 1% revenue share (24mo, capped 2× fees)
+
+Total investment: £40k for infrastructure that scales to IPO.
+
+---
+
+Why only 5 seats?
+
+Because this requires deep, hands-on work. No cookie-cutter solutions.
+
+Each engagement is custom-architected for your specific stack, compliance needs, and growth trajectory.
+
+Quality over quantity. Always.
+
+---
+
+Ready to go sovereign?
+
+📧 DM or email: sheridon@yourdomain
+📋 Details: ./docs/founders-circle.html
+
+Include: company, team size, current stack, why now.
+
+Applications reviewed weekly. Start dates scheduled on acceptance.
+
+The future is verifiable. 🔐
