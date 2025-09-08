@@ -12,3 +12,12 @@ sirdi.sec
 sirdi.sec.enc
 sirdi_watchdog.log
 logs/
+sirdi.sec.backup
+sirdi.pub.backup
+sirdi.sec.enc.sha256
+*.swp
+current_log.txt
+watchdog.log
+watchdog.pid
+sirdi_ignition.sh
+SIRDI.Modelfile
