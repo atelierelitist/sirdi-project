@@ -1,0 +1,145 @@
+ignite_sirdi:
+description: Run the SIRDI ignition ritual
+command: bash ~/sirdi_ignite.sh
+
+anchor_genesis:
+description: Anchor/verify SIRDI genesis signature
+command: |
+cd ~/sirdi-project
+signify-openbsd -V -p sirdi.pub -m first_log.txt -x first_log.txt.sig
+
+watchdog_report:
+description: Quick watchdog health snapshot
+command: |
+ps aux | grep -i sirdi_watchdog | grep -v grep || true
+tail -n 20 ~/sirdi-project/sirdi_watchdog.log 2>/dev/null || true
+
+- name: teach_resign_genesis
+description: Re-sign the genesis log and record a teachable HOW-TO for SIRDI.
+command: |
+set -euo pipefail
+cd ~/sirdi-project
+mkdir -p bin brain logs
+    
+    # -- create resign_genesis.sh if missing ---
+    
+    if [ \! -x bin/resign_genesis.sh ]; then
+    cat > bin/resign_genesis.sh <<'SH'
+    #\!/usr/bin/env bash
+    set -euo pipefail
+    cd ~/sirdi-project
+    sudo chattr -i first_log.txt first_log.txt.sig 2>/dev/null || true
+    chmod u+w first_log.txt first_log.txt.sig 2>/dev/null || true
+    signify-openbsd -S -s sirdi.sec -m first_log.txt
+    signify-openbsd -V -p sirdi.pub -m first_log.txt -x first_log.txt.sig
+    chmod 0444 first_log.txt first_log.txt.sig
+    sudo chattr +i first_log.txt first_log.txt.sig 2>/dev/null || true
+    echo "✅ Genesis log re-signed, verified, and locked."
+    SH
+    chmod +x bin/resign_genesis.sh
+    fi
+    
+    # -- create teach.sh if missing ---
+    
+    if [ \! -x bin/teach.sh ]; then
+    cat > bin/teach.sh <<'SH'
+    #\!/usr/bin/env bash
+    set -euo pipefail
+    cd ~/sirdi-project
+    lesson="${1:-lesson}"; shift || true
+    ts="$(date +%Y-%m-%d_%H-%M-%S)"
+    log="logs/${ts}__${lesson}.log"
+    ( set -x; "$@" ) 2>&1 | tee "$log"
+    if [[ -f sirdi.sec ]]; then
+    signify-openbsd -S -s sirdi.sec -m "$log" 2>/dev/null || true
+    fi
+    note="brain/howto_${lesson}.md"
+    {
+    echo "# HOW-TO: ${lesson//-/ }"
+    echo
+    echo "## Command"
+    printf '`bash\\n%s\\n`\n' "$*"
+    echo "## Log"
+    echo "File: $log"
+    [[ -f ${log}.sig ]] && echo "Signature: ${log}.sig"
+    [[ -f ${log}.sig ]] && \
+    echo "Verify: signify-openbsd -V -p sirdi.pub -m $log -x ${log}.sig"
+    } > "$note"
+    echo "🧠 Knowledge stored: $note"
+    echo "🗒 Log: $log"
+    SH
+    chmod +x bin/teach.sh
+    fi
+    
+    # Run the teach wrapper which executes and records the ritual
+    
+    bin/teach.sh resign_genesis bin/resign_genesis.sh
+    YAML
+
+- name: teach_watchdog_status
+description: Record a watchdog health snapshot and store a signed HOW-TO.
+command: |
+set -euo pipefail
+cd ~/sirdi-project
+mkdir -p bin brain logs
+    
+    # script if missing
+    
+    if [ \! -x bin/watchdog_report.sh ]; then
+    cat > bin/watchdog_report.sh <<'SH'
+    #\!/usr/bin/env bash
+    set -euo pipefail
+    cd ~/sirdi-project
+    echo "== SIRDI Watchdog =="
+    date
+    ps aux | grep -i sirdi_watchdog | grep -v grep || true
+    tail -n 40 sirdi_watchdog.log 2>/dev/null || echo "No watchdog log yet."
+    echo
+    echo "== Genesis signature check =="
+    signify-openbsd -V -p sirdi.pub -m first_log.txt -x first_log.txt.sig && echo "Signature Verified"
+SH
+    chmod +x bin/watchdog_report.sh
+    fi
+    
+    # run through the teacher
+    
+    bin/teach.sh watchdog_status bin/watchdog_report.sh
+    YAML
+
+- name: teach_git_safe_commit
+description: Commit only public-safe files; never commit secrets or runtime logs.
+command: |
+set -euo pipefail
+cd ~/sirdi-project
+mkdir -p bin brain logs
+    
+    # ensure .gitignore protects secrets & logs
+    
+    printf '%s\n' \
+    'sirdi.sec' \
+    'sirdi.sec.enc' \
+    'sirdi_watchdog.log' \
+    'logs/*.sig' \
+    'logs/*.log' \
+    >> .gitignore
+    
+    if [ \! -x bin/git_safe_commit.sh ]; then
+    cat > bin/git_safe_commit.sh <<'SH'
+    #\!/usr/bin/env bash
+    set -euo pipefail
+    cd ~/sirdi-project
+    echo "== Git status (public-safe) =="
+    git status -s || git init
+    git add first_log.txt first_log.txt.sig sirdi.pub .gitignore bin/ brain/
+    git commit -m "doc: update HOW-TOs & public artifacts" || echo "Nothing to commit."
+    git log --oneline -n 3 || true
+SH
+    chmod +x bin/git_safe_commit.sh
+    fi
+    
+    bin/teach.sh git_safe_commit bin/git_safe_commit.sh
+    YAML
+
+- name: backup_keys
+description: Encrypt SIRDI key, checksum, copy to USB/Cloud, and verify
+command: bash ~/sirdi-project/bin/backup_keys.sh

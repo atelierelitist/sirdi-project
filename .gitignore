@@ -1,3 +1,14 @@
 sirdi.sec
 sirdi.sec.enc
 sirdi_watchdog.log
+sirdi.sec
+sirdi.sec.enc
+sirdi_watchdog.log
+logs/*.sig
+logs/*.log
+.env
+.env
+sirdi.sec
+sirdi.sec.enc
+sirdi_watchdog.log
+logs/
