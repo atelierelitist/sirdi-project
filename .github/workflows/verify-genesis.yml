@@ -1,0 +1,19 @@
+name: Verify SIRDI Genesis
+on:
+  push:
+    paths:
+      - first_log.txt
+      - first_log.txt.sig
+      - sirdi.pub
+      - .github/workflows/verify-genesis.yml
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install signify-openbsd
+        run: sudo apt-get update && sudo apt-get install -y signify-openbsd
+      - name: Verify genesis signature
+        run: |
+          signify-openbsd -V -p sirdi.pub -m first_log.txt -x first_log.txt.sig
