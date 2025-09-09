@@ -1,0 +1,22 @@
+name: Sync README to Docs
+on:
+  push:
+    branches: [ "main" ]
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Copy README to docs
+      run: |
+        mkdir -p docs
+        cp README.md docs/index.md
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "docs: sync README to docs"
+        commit_user_name: SIRDI Bot
+        commit_user_email: noreply@users.noreply.github.com
+        commit_author: SIRDI Bot <noreply@users.noreply.github.com>
