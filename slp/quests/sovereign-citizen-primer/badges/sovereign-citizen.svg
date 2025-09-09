@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#667eea"/><stop offset="1" stop-color="#764ba2"/>
+</linearGradient>
+</defs>
+<rect width="640" height="640" rx="48" fill="url(#g)"/>
+<circle cx="320" cy="280" r="120" fill="#fff" opacity=".14"/>
+<text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="34" font-weight="700">SOVEREIGN CITIZEN</text>
+<text x="50%" y="66%" text-anchor="middle" fill="#e5e7eb" font-size="20">Quest #1 • Verified by SIRDI</text>
+</svg>

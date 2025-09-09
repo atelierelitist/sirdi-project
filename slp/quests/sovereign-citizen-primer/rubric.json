@@ -1,0 +1,9 @@
+{
+"quest": "sovereign-citizen-primer",
+"criteria": [
+{"id":"doctrine","desc":"Explains sovereignty, verification, ethics","weight":0.3},
+{"id":"workstation","desc":"Demonstrates secure workstation setup","weight":0.3},
+{"id":"veritas","desc":"Provides reproducible hashes + proofs","weight":0.4}
+],
+"pass_threshold": 0.8
+}
