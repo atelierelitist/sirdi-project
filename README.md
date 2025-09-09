@@ -1,31 +1,23 @@
 
-# SIRDI Project — Public Genesis
+# SIRDI Project
 
-**SIRDI** = *Sentient Intelligence for Real-time Dialogue & Insight*
+**Sentient Intelligence for Real-time Dialogue & Insight**
 
-This repo publishes the **verifiable genesis** of the SIRDI stack and a minimal, safe
-project skeleton (no secrets).
+SIRDI is a verifiable, self-documenting AI operations stack.
 
----
+It couples **Auggie** (execution) with a teachable **brain/** and signed **logs/** to deliver
+auditable automation for founders, researchers, and sovereign builders.
 
-## 🧾 What's in here
-
-- `first_log.txt` — the genesis log (read-only)
-- `first_log.txt.sig` — signature for the genesis log
-- `sirdi.pub` — public key used to verify signatures
-- `bin/` — executable rituals (automation scripts)
-- `brain/` — HOW-TO knowledge (self-teaching docs)
-- `.auggie/tasks.yaml` — Auggie task library (automation entrypoints)
-
-Private artifacts like `sirdi.sec` (secret key) and runtime logs are **not** included.
+- **Live docs:** https://atelierelitist.github.io/sirdi-project
+- **Repo:** https://github.com/atelierelitist/sirdi-project
 
 ---
 
-## ✅ Verify the Genesis (any Linux/macOS with signify-openbsd)
+## 🔐 Verify the Genesis (provenance)
+
+This repo includes an immutable genesis log and signature. To verify:
 
 ```bash
-# Clone this repo, cd into it, then run:
+# from a cloned working copy
 signify-openbsd -V -p sirdi.pub -m first_log.txt -x first_log.txt.sig
 ```
-
-[\![Verify Genesis](https://github.com/<USER>/<REPO>/actions/workflows/verify-genesis.yml/badge.svg)](https://github.com/<USER>/<REPO>/actions/workflows/verify-genesis.yml)
