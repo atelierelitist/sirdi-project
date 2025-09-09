@@ -1,0 +1,12 @@
+{
+"name": "SIRDI Project",
+"short_name": "SIRDI",
+"icons": [
+{"src": "/sirdi-project/img/favicon-16x16.png", "sizes": "16x16", "type": "image/png"},
+{"src": "/sirdi-project/img/favicon-32x32.png", "sizes": "32x32", "type": "image/png"},
+{"src": "/sirdi-project/img/favicon-512.png",  "sizes": "512x512","type": "image/png"}
+],
+"theme_color": "#667eea",
+"background_color": "#ffffff",
+"display": "standalone"
+}
