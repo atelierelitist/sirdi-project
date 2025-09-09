@@ -1,6 +1,10 @@
 
 # SIRDI Project
 
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Commits](https://img.shields.io/badge/commits-verified-green)
+
 **Sentient Intelligence for Real-time Dialogue & Insight**
 
 SIRDI is a verifiable, self-documenting AI operations stack.
