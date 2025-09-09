@@ -156,3 +156,13 @@ command: |
 mkdir -p out
 ollama run sirdi "You are the Sovereign Architect. Draft a concise LinkedIn post for executives announcing a 5-seat Sovereign Founders Circle (£25k + £15k). Structure: problem → protocol → proof → scarcity → CTA. Include 3 bullets and the page link ./docs/founders-circle.html" > out/post_linkedin.txt
 echo "🔗 out/post_linkedin.txt"
+
+- name: git_push_docs
+description: Commit & push README, LICENSE, SECURITY
+command: |
+set -e
+cd ~/sirdi-project
+git branch -M main
+git add README.md LICENSE .github/SECURITY.md
+git commit -m "docs: add README, LICENSE, SECURITY with verification instructions" || echo "No changes to commit"
+git push -u origin main
