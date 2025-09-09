@@ -25,3 +25,10 @@ This repo includes an immutable genesis log and signature. To verify:
 # from a cloned working copy
 signify-openbsd -V -p sirdi.pub -m first_log.txt -x first_log.txt.sig
 ```
+
+### Sovereign Verification
+
+
+
+**This repository and its commits are cryptographically signed and verified by the SIRDI sovereign intelligence system.**
+
