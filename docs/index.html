@@ -1,134 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SIRDI Project - A verifiable, self-teaching AI operations stack for modern development workflows">
-<meta name="author" content="SIRDI Project Team">
-<meta name="keywords" content="AI, operations, self-teaching, verifiable, automation, DevOps">
-
-<!-- Open Graph / Social Media -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="SIRDI Project">
-<meta property="og:description" content="Verifiable, self-teaching AI ops stack">
-<meta property="og:url" content="https://github.com/atelierelitist/sirdi-project">
-<meta property="og:site_name" content="SIRDI Project">
-<meta name="twitter:description" content="Genesis-verified, self-documenting automation you can trust.">
-
-<title>SIRDI Project - Verifiable AI Operations Stack</title>
-
+<\!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIRDI Project — Verifiable Consulting</title>
 <link rel="stylesheet" href="https://unpkg.com/mvp.css">
-<style>
-    :root {
-        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        --accent-color: #4f46e5;
-        --text-muted: #6b7280;
-        --border-color: #e5e7eb;
-        --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
-    body {
-        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
-    main {
-        background: white;
-        border-radius: 16px;
-        padding: 3rem 2.5rem;
-        box-shadow: var(--shadow-soft);
-        border: 1px solid var(--border-color);
-        max-width: 600px;
-        width: 100%;
-        margin: 2rem;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-    main::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--primary-gradient);
-        border-radius: 16px 16px 0 0;
-    }
-    h1 {
-        background: var(--primary-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-size: 3rem;
-        font-weight: 800;
-        margin: 0 0 1.5rem 0;
-        letter-spacing: -0.025em;
-    }
-    .subtitle { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem; font-weight: 500; line-height: 1.6; }
-    .cta-container { margin-top: 2.5rem; }
-    .cta-button {
-        display: inline-flex; align-items: center; gap: 0.5rem;
-        background: var(--primary-gradient); color: white; text-decoration: none;
-        padding: 0.875rem 2rem; border-radius: 12px; font-weight: 600; font-size: 1.1rem;
-        transition: all 0.2s ease; box-shadow: var(--shadow-soft); border: none;
-    }
-    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px -8px rgba(102,126,234,.6); color: white; }
-    .github-icon { width: 20px; height: 20px; fill: currentColor; }
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
-    .feature { padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
-    .feature-title { font-weight: 600; color: var(--accent-color); font-size: .9rem; margin-bottom: .25rem; }
-    .feature-desc { font-size: .8rem; color: var(--text-muted); margin: 0; }
-    @media (max-width:768px){ main{margin:1rem;padding:2rem 1.5rem} h1{font-size:2.5rem} .subtitle{font-size:1.1rem}}
-    main { animation: fadeInUp .6s ease-out; }
-    @keyframes fadeInUp { from { opacity:0; transform: translateY(20px);} to { opacity:1; transform: translateY(0);} }
-</style>
-
-<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-<link rel="alternate icon" type="image/png" href="img/favicon.png">
-
-<!-- Optional analytics: replace G-XXXX with your ID, then remove this comment -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script> -->
-<!-- <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-XXXX");</script> -->
-
-<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#667eea">
-
-<script defer data-domain="atelierelitist.github.io" src="https://plausible.io/js/script.js"></script>
-<meta property="og:image" content="https://atelierelitist.github.io/sirdi-project/img/social_og_v2.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SIRDI Project — Sovereign Founders Circle">
-<meta name="twitter:image" content="https://atelierelitist.github.io/sirdi-project/img/social_og_v2.png">
-</head>
-<body>
-<main role="main">
+<style>main{max-width:860px;margin:auto}</style>
+</head><body><main>
 <h1>SIRDI Project</h1>
-<p class="subtitle">Verifiable, self-teaching AI operations stack for modern development workflows</p>
-<div class="features">
-<div class="feature"><div class="feature-title">Verifiable</div><p class="feature-desc">Transparent and auditable operations</p></div>
-<div class="feature"><div class="feature-title">Self-Teaching</div><p class="feature-desc">Adaptive learning capabilities</p></div>
-<div class="feature"><div class="feature-title">AI-Powered</div><p class="feature-desc">Intelligent automation stack</p></div>
-</div>
-<div class="cta-container">
-<a href="https://github.com/atelierelitist/sirdi-project#readme?utm_source=github_pages&utm_medium=landing_cta&utm_campaign=sirdi_launch" class="cta-button" aria-label="View SIRDI Project documentation on GitHub">
-<svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true">
-<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-</svg>
-Explore Documentation
-</a>
-</div>
-</main>
-<script>
-document.querySelector('.cta-button').addEventListener('click', () => {
-console.log('GitHub documentation link clicked');
-});
-const link = document.createElement('link'); link.rel='dns-prefetch'; link.href='https://github.com/'; document.head.appendChild(link);
-</script>
-<script>document.querySelector(".cta-button")?.addEventListener("click",function(){window.plausible&&plausible("CTA:ExploreDocumentation")});</script>
-</body>
-</html>
+<p class="subtitle">Blockchain-verified consulting deliverables — cryptographic signatures + public anchors.</p>
+
+<p><a href="ryan.html">Ryan / Prestige Interior Cleaning — Verification</a></p>
+
+<h3>Verify our work</h3>
+<ul>
+<li>Public repo: <a href="https://github.com/atelierelitist/sirdi-project">github.com/atelierelitist/sirdi-project</a></li>
+<li>Operator public key: <a href="https://raw.githubusercontent.com/atelierelitist/sirdi-project/main/clients/ryan_prestige/sirdi.pub">sirdi.pub</a></li>
+</ul>
+
+<p>Every deliverable is signed and independently verifiable without relying on our systems.</p>
+</main></body></html>

@@ -1,0 +1,26 @@
+<\!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prestige Interior Cleaning — Verification</title>
+<link rel="stylesheet" href="https://unpkg.com/mvp.css">
+<style>main{max-width:860px;margin:auto}</style>
+</head><body><main>
+<h1>Prestige Interior Cleaning — Verification</h1>
+
+<p><strong>Proof package:</strong>
+<a href="https://github.com/atelierelitist/sirdi-project/raw/main/clients/ryan_prestige/prestige_proof_v1.tgz">prestige_proof_v1.tgz</a></p>
+
+<h3>Verify locally</h3>
+<pre>tar -xzf prestige_proof_v1.tgz
+bash verify_prestige_proof.sh</pre>
+
+<h3>Verify on Stellar (Horizon)</h3>
+<pre>curl -s "https://horizon-testnet.stellar.org/transactions/1442156d9ad569796c771b45e70e6921498ec0dd2fb9cc161f2743558b521553" \
+| jq -r '.id,.memo_type,.ledger'</pre>
+
+<p>Repo folder with all artifacts:
+<a href="https://github.com/atelierelitist/sirdi-project/tree/main/clients/ryan_prestige">
+clients/ryan_prestige</a></p>
+
+<p>Operator public key:
+<a href="https://raw.githubusercontent.com/atelierelitist/sirdi-project/main/clients/ryan_prestige/sirdi.pub">sirdi.pub</a></p>
+</main></body></html>
