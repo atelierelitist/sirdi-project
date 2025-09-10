@@ -1,0 +1,7 @@
+{
+"client":"Prestige Interior Cleaning",
+"participant":"<Full Name>",
+"quest":"Secure Comms Basics",
+"modules":["MFA set","Password manager added","Recovery codes stored"],
+"completed_at":"<ISO-8601 timestamp>"
+}

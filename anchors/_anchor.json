@@ -1,8 +1,20 @@
 {
-"anchored_at_utc": "2025-09-10T00:00:52Z",
-"artifacts": [
-{"name": "secure_comms_completion.json", "sha256": ""},
-{"name": "dva_report_v1.md", "sha256": ""}
-],
-"note": "Ready for Stellar testnet anchoring"
+  "anchored_at_utc": "2025-09-10T00:00:52Z",
+  "artifacts": [
+    {
+      "name": "secure_comms_completion.json",
+      "sha256": ""
+    },
+    {
+      "name": "dva_report_v1.md",
+      "sha256": ""
+    }
+  ],
+  "note": "Ready for Stellar testnet anchoring",
+  "stellar_anchor": {
+    "network": "TESTNET",
+    "txid": "1feefb7eb34bd7e3f8c2c812913c2ef40a9c8bda9bb0d697b927e9b322a26cb3",
+    "memo_sha256": "380d8f26c83991a1ed5aec9121eedf519f0bad9655745bbd9f227d02f374c5f7",
+    "anchored_at_utc": "2025-09-10T00:05:30.189Z"
+  }
 }
