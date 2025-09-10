@@ -1,8 +1,20 @@
 {
-"anchored_at_utc": "2025-09-10T00:02:00Z",
-"artifacts": [
-{"name": "secure_comms_completion.json", "sha256": "098aa963129b55d96b656f7a6ccfc938408e4813b82c3f49b77e7e02c607be06"},
-{"name": "dva_report_v1.md", "sha256": "141d8c8e792e56f60b6ed4c6de6b3a8a6caadbd74fbf9d9b944fb1b760e1c30b"}
-],
-"note": "Ready for Stellar testnet anchoring"
+  "anchored_at_utc": "2025-09-10T00:02:00Z",
+  "artifacts": [
+    {
+      "name": "secure_comms_completion.json",
+      "sha256": "098aa963129b55d96b656f7a6ccfc938408e4813b82c3f49b77e7e02c607be06"
+    },
+    {
+      "name": "dva_report_v1.md",
+      "sha256": "141d8c8e792e56f60b6ed4c6de6b3a8a6caadbd74fbf9d9b944fb1b760e1c30b"
+    }
+  ],
+  "note": "Ready for Stellar testnet anchoring",
+  "stellar_anchor": {
+    "network": "TESTNET",
+    "txid": "1442156d9ad569796c771b45e70e6921498ec0dd2fb9cc161f2743558b521553",
+    "memo_sha256": "2b80c5af7a36d245bf16057b1004ac41a14634c8ffbbde57ad7b64a4929888d1",
+    "anchored_at_utc": "2025-09-10T00:05:59.748Z"
+  }
 }
