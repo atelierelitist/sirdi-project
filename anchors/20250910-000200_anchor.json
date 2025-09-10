@@ -1,0 +1,8 @@
+{
+"anchored_at_utc": "2025-09-10T00:02:00Z",
+"artifacts": [
+{"name": "secure_comms_completion.json", "sha256": "098aa963129b55d96b656f7a6ccfc938408e4813b82c3f49b77e7e02c607be06"},
+{"name": "dva_report_v1.md", "sha256": "141d8c8e792e56f60b6ed4c6de6b3a8a6caadbd74fbf9d9b944fb1b760e1c30b"}
+],
+"note": "Ready for Stellar testnet anchoring"
+}
